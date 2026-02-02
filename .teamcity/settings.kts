@@ -27,6 +27,7 @@ version = "2025.11"
 
 project {
 
+    buildType(Build1_2)
     buildType(Build1)
 
     params {
@@ -48,6 +49,19 @@ object Build1 : BuildType({
 
     dependencies {
         snapshot(Project1_Pipeline1) {
+        }
+    }
+})
+
+object Build1_2 : BuildType({
+    name = "Build_1"
+
+    vcs {
+        root(DslContext.settingsRoot)
+    }
+
+    features {
+        perfmon {
         }
     }
 })
