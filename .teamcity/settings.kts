@@ -28,6 +28,10 @@ version = "2025.11"
 project {
 
     buildType(Build1)
+
+    params {
+        param("a", "1")
+    }
 }
 
 object Build1 : BuildType({
@@ -43,7 +47,7 @@ object Build1 : BuildType({
     }
 
     dependencies {
-        snapshot(RelativeId("Pipeline1")) {
+        snapshot(Project1_Pipeline1) {
         }
     }
 })
