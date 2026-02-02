@@ -33,6 +33,8 @@ project {
     params {
         param("a", "1")
     }
+
+    subProject(Project1)
 }
 
 object Build1 : BuildType({
@@ -64,4 +66,9 @@ object Build1_2 : BuildType({
         perfmon {
         }
     }
+})
+
+
+object Project1 : Project({
+    name = "Project_1"
 })
