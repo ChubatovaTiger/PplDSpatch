@@ -43,7 +43,7 @@ object Build1 : BuildType({
     }
 
     dependencies {
-        snapshot(RelativeId("Pipeline1")) {
+        snapshot(Project1_Pipeline1) {
         }
     }
 })
